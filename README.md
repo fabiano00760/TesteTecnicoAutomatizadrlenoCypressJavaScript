@@ -42,13 +42,44 @@ cypress/
  │    ├── screenshots
  │    │     
  │    │
- │    └── vdeos
+ │    └── videos
  │          
  │          
 ```
 
 ---
+# 🚀 Guia de Instalação e Execução - Automação Web (Cypress)
 
+Este guia contém os passos necessários para clonar o repositório, configurar o ambiente e executar os testes automatizados.
+
+---
+
+## 📋 Pré-requisitos
+
+Antes de começar, você precisará ter instalado em sua máquina:
+
+1. **Node.js** (Versão 18 ou superior recomendada): [Baixar Node.js](https://nodejs.org/)
+2. **Git**: [Baixar Git](https://git-scm.com/)
+3. **VS Code** (Ou sua IDE de preferência).
+
+Para verificar se já possui o Node instalado, digite no terminal:
+```bash
+node -v
+npm -v
+🛠️ Passo a Passo para Instalação
+1. Clonar o Repositório
+Abra o seu terminal (ou Git Bash) e execute o comando abaixo:
+
+Bash
+git clone [https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git](https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git)
+2. Acessar a Pasta do Projeto
+Bash
+cd NOME_DO_REPOSITORIO
+3. Instalar as Dependências
+Este comando baixará todas as bibliotecas necessárias (incluindo o Cypress e plugins) listadas no arquivo package.json:
+
+Bash
+npm install
 # ▶️ Pré-requisitos
 
 Antes de executar o projeto, é necessário ter instalado:
