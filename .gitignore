@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# Cypress screenshots
+cypress/reports/screenshots/
+
+# Cypress videos
+cypress/videos/
+
+# Cypress test reports
+cypress/reports/
+
+# Logs
+*.log

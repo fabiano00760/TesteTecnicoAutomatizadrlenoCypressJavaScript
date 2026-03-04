@@ -1,5 +1,26 @@
 import { Given, When, Then, Before } from "@badeball/cypress-cucumber-preprocessor";
 import CheckoutPage from "../page_objects/CheckoutPage";
+import { After } from "@badeball/cypress-cucumber-preprocessor";
+
+After(function (scenario) {
+  // Checa se já tirou screenshot
+  if (!this.screenshotTaken) {
+    this.screenshotTaken = true; // marca como tirado
+
+    const nomeCenario = scenario.pickle.name.replace(/ /g, "_");
+    const nomeFeature = scenario.pickle.uri
+      .split("/")
+      .pop()
+      .replace(".feature", "")
+      .replace(/ /g, "_");
+
+    const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+    const status = scenario.result?.status || "UNKNOWN"; // evita undefined
+
+    const screenshotPath = `${nomeFeature}/CENARIO_${nomeCenario}_${status}_${timestamp}`;
+    cy.screenshot(screenshotPath);
+  }
+});
 
 let dados;
 

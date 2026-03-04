@@ -1,6 +1,27 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import LoginPage from "../page_objects/LoginPage";
 import CarrinhoPage from "../page_objects/CarrinhoPage";
+import { After } from "@badeball/cypress-cucumber-preprocessor";
+
+After(function (scenario) {
+  // Checa se já tirou screenshot
+  if (!this.screenshotTaken) {
+    this.screenshotTaken = true; // marca como tirado
+
+    const nomeCenario = scenario.pickle.name.replace(/ /g, "_");
+    const nomeFeature = scenario.pickle.uri
+      .split("/")
+      .pop()
+      .replace(".feature", "")
+      .replace(/ /g, "_");
+
+    const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+    const status = scenario.result?.status || "UNKNOWN"; // evita undefined
+
+    const screenshotPath = `${nomeFeature}/CENARIO_${nomeCenario}_${status}_${timestamp}`;
+    cy.screenshot(screenshotPath);
+  }
+});
+
 
 Given("que eu esteja logado com o usuario {string} e senha {string}", (usuario, senha) => {
   cy.session([usuario, senha], () => {
