@@ -1,0 +1,17 @@
+{
+  "valido": {
+    "usuario": "standard_user",
+    "senha": "secret_sauce"
+  },
+  "invalido": {
+    "usuario": "usuario_errado",
+    "senha": "senha_errada",
+    "msg": "Epic sadface: Username and password do not match any user in this service"
+  },
+  "checkout": {
+  "nome": "Fabiano",
+  "sobrenome": "Silva",
+  "cep": "12345",
+  "sucesso": "Thank you for your order!"
+}
+}

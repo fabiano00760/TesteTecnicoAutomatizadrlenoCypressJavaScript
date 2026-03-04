@@ -1,0 +1,31 @@
+{
+  "name": "testetecnicoautomatizadrlenocypressjavascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "report:generate": "node cucumber-report.js",
+    "test:all": "npm run cypress:run && npm run report:generate"
+  },
+  "keywords": [],
+  "author": "Fabiano de Barros Silva",
+  "license": "ISC",
+  "description": "Automacao de teste utilizando Cypress e JavaScript https://www.saucedemo.com",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^24.0.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
+    "cypress": "^15.11.0",
+    "multiple-cucumber-html-reporter": "^3.10.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "cypress/support/step_definitions/**/*.{js,ts}",
+      "cypress/support/step_definitions/*.{js,ts}"
+    ],
+    "json": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-results.json"
+    }
+  }
+}
