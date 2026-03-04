@@ -86,6 +86,15 @@ npm install
 ```
 
 ---
+# 📦 Scripts Disponíveis
+
+| Script | Descrição |
+|--------|-----------|
+| `npm run cypress:open` | Abre a interface interativa do Cypress |
+| `npm run cypress:run` | Executa os testes em modo headless |
+| `npm run report:generate` | Gera relatório HTML |
+| `npm run test:all` | Executa testes + gera relatório |
+
 
 # 🚀 Executando os Testes
 
@@ -248,8 +257,6 @@ cypress/fixtures/loginData.json
 E reinicie o Cypress após criar novos arquivos.
 
 ---
-
-# 🏆 Objetivo do Projeto
 
 Demonstrar conhecimento em:
 
