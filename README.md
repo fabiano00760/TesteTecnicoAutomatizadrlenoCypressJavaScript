@@ -115,7 +115,6 @@ Instale as dependências:
 ```bash
 npm install
 ```
-
 ---
 # 📦 Scripts Disponíveis
 
