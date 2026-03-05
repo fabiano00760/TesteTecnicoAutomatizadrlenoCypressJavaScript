@@ -101,7 +101,7 @@ npm -v
 Clone o repositório:
 
 ```bash
-git clone https://github.com/fabiano00760/TesteTecnicoAutomatizadrlenoCypressJavaScript.git
+git clone https://github.com/fabiano00760/TesteTecnicoAutomatizarPlenoCypressJavaScript.git
 ```
 
 Acesse a pasta do projeto:
